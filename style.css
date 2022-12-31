@@ -1,0 +1,49 @@
+body {
+  background-color: #8a6813;
+  display: flex;
+  margin: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: #212121;
+  font-size: min(6vw, 12vh);
+  flex-direction: column;
+}
+
+body .date, body .time {
+  display: flex;
+}
+
+.item {
+  margin: 2vw;
+  width: 6vw;
+  text-align: center;
+}
+
+.item.year {
+  width:12vw;
+}
+.item div {
+  position: absolute;
+  transition: transform 0.5s;
+}
+.item div.down {
+  transform:rotateX(288deg) translateY(2em);
+}
+
+.item div.center {
+  z-index: 1;
+}
+
+.item div.up {
+  transform:rotateX(72deg) translateY(-2em);
+}
+
+.item div.back {
+  transform: rotateX(144deg) translateY(0em) scaleY(0);
+
+}
+.item div.none {
+  transform: scaleY(0);
+}
