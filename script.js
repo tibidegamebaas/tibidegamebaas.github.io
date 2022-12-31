@@ -79,8 +79,6 @@ window.addEventListener("DOMContentLoaded", () => {
       elem.innerHTML = content.toString().length == 1 ? "0"+content : content
     }
     if(elem.classList.contains("month")){
-      var gibbydoo = new Date();
-      console.log(gibbydoo.getMonth());
       var content = (globalThis.d.getMonth() + offset + 14) % 13;
       if(content==0){content=1}
       elem.innerHTML = content.toString().length == 1 ? "0"+content : content;
