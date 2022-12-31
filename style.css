@@ -17,7 +17,7 @@ body .date, body .time {
 }
 
 .item {
-  margin: 2vw;
+  margin: 0 3vw;
   width: 6vw;
   text-align: center;
 }
@@ -28,23 +28,20 @@ body .date, body .time {
 .item div {
   position: absolute;
   transition: transform 0.5s;
+  filter: opacity(1);
 }
-.item div.down {
-  transform:rotateX(288deg) translateY(2em);
+.item div.none {
+  transform: rotateX(144deg) translateY(0em) scale(0);
 }
-
-.item div.center {
-  z-index: 1;
-}
-
 .item div.up {
   transform:rotateX(72deg) translateY(-2em);
 }
-
-.item div.back {
-  transform: rotateX(144deg) translateY(0em) scaleY(0);
-
+.item div.center {
+  z-index: 1;
 }
-.item div.none {
-  transform: scaleY(0);
+.item div.down {
+  transform:rotateX(-72deg) translateY(2em);
+}
+.item div.back {
+  transform: rotateX(-144deg) translateY(0em) scale(0);
 }
