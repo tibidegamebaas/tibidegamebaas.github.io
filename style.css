@@ -9,6 +9,7 @@ body {
   color: #212121;
   font-size: min(6vw, 12vh);
   flex-direction: column;
+  user-select: none;
 }
 
 body .date, body .time {
